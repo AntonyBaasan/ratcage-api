@@ -19,7 +19,7 @@ development:
 #test:
 #  <<: *default
 #  database: db/test.sqlite3
-production:
+test:
   host: <%= ENV["DB_HOST"] %>
   adapter: postgresql
   encoding: unicode
