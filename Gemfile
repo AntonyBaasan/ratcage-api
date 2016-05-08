@@ -41,4 +41,13 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# set ruby version
 ruby "2.3.0"
+
+group :development, :test do
+  # Use RSpec for specs
+  gem 'rspec-rails', '3.1.0'
+
+  # Use Factory Girl for generating random test data
+  gem 'factory_girl_rails'
+end
