@@ -35,6 +35,8 @@ module RatcageApi
     #   end
     # end
 
-    
+    # Rate Limiting and Throttling (https://github.com/kickstarter/rack-attack)
+    config.middleware.use Rack::Attack
+
   end
 end

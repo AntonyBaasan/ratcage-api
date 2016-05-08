@@ -54,3 +54,6 @@ end
 
 # used for enabling cors requests
 gem 'rack-cors'
+
+# protections from web attacks. read more here https://github.com/kickstarter/rack-attack
+gem 'rack-attack'
