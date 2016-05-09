@@ -42,7 +42,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # set ruby version
-ruby "2.3.0"
+# ruby "~> 2.3.0"
 
 group :development, :test do
   # Use RSpec for specs
