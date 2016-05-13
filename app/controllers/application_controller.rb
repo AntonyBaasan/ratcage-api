@@ -43,6 +43,6 @@ class ApplicationController < ActionController::API
 
   private
   def project_params
-    params.require(:@projects).permit(:name, :description, :author, :content )
+    params.require(:project).permit(:name, :description, :author, :author_url, :content )
   end
 end
