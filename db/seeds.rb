@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Project.create([
-                   {name: "Project1", description: "This is a test projects", author: "User1"},
-                   {name: "Project2", description: "Awesome project creator", author: "User2"}])
+                   {name: "Project1", description: "This is a test projects", author: "User1", content: "very long string"},
+                   {name: "Project2", description: "Awesome project creator", author: "User2", content: "very long string"}])

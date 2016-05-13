@@ -24,6 +24,6 @@ class ApplicationController < ActionController::API
 
   private
   def person_params
-    params.require(:@projects).permit(:name, :description, :author, :search)
+    params.require(:@projects).permit(:name, :description, :author )
   end
 end
