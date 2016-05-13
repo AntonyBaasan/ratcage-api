@@ -1,10 +1,15 @@
 class ApplicationController < ActionController::API
+  def count
+    render json: Project.count
+  end
+
   def index
 
     if (params[:search])
-      @projects = Project.where('name LIKE :search OR description LIKE :search OR author LIKE :search', search: "%#{params[:search]}%")
+      @projects = Project.where('name LIKE :search OR description LIKE :search OR author LIKE :search OR author_url LIKE :search', search: "%#{params[:search]}%").order('name')
     else
-      @projects = Project.all
+      # @projects = Project.all
+      @projects = Project.paginate(:page => params[:page], :per_page => 2).order('created_at DESC')
     end
 
     render json: @projects

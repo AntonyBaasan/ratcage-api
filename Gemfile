@@ -57,3 +57,6 @@ gem 'rack-cors'
 
 # protections from web attacks. read more here https://github.com/kickstarter/rack-attack
 gem 'rack-attack'
+
+# pagination from https://github.com/mislav/will_paginate
+gem 'will_paginate', '~> 3.1.0'
