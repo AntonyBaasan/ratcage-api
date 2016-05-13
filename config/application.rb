@@ -28,12 +28,12 @@ module RatcageApi
     config.api_only = true
 
     # CORS configuaration
-    # config.middleware.insert_before 0, "Rack::Cors" do
-    #   allow do
-    #     origins "*"
-    #     resource "*", headers: :any, :methods => [:get, :post, :options]
-    #   end
-    # end
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins "localhost"
+        resource "*", headers: :any, :methods => [:get, :post, :options]
+      end
+    end
 
     # Rate Limiting and Throttling (https://github.com/kickstarter/rack-attack)
     config.middleware.use Rack::Attack
