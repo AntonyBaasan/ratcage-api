@@ -26,6 +26,8 @@ class ApplicationController < ActionController::API
   end
 
   def show
+    project = Project.where(params[:id])
+      render json: project
   end
 
   def update
@@ -48,6 +50,6 @@ class ApplicationController < ActionController::API
 
   private
   def project_params
-    params.require(:project).permit(:name, :description, :author, :author_url, :content )
+    params.require(:project).permit(:name, :description, :author, :author_url, :content)
   end
 end
