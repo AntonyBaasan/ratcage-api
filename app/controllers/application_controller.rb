@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::API
   def index
-    @projects = Project.all
+
+    if (params[:search])
+      @projects = Project.where('name LIKE :search OR description LIKE :search OR author LIKE :search', search: "%#{params[:search]}%")
+    else
+      @projects = Project.all
+    end
 
     render json: @projects
   end
@@ -17,4 +22,8 @@ class ApplicationController < ActionController::API
   def destroy
   end
 
+  private
+  def person_params
+    params.require(:@projects).permit(:name, :description, :author, :search)
+  end
 end
