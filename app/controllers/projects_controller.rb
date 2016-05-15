@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
   def destroy
     project = Project.find(params[:id])
     # Option A: just delete "project.destroy"
-    project.destroy
+    # project.destroy
     # Option B: just delete "project.archive" ()
     # project.archive
 

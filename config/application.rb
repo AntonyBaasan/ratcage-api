@@ -28,9 +28,10 @@ module RatcageApi
     config.api_only = true
 
     # CORS configuaration
-    config.middleware.insert_before 0, "Rack::Cors" do
+    config.middleware.insert_before 0, "ck::CorsRa" do
       allow do
-        origins "localhost","antonybaasan.2016.angularattack.io"
+        origins "localhost"
+        # origins "antonybaasan.2016.angularattack.io"
         resource "*", headers: :any, :methods => [:get, :post, :options]
       end
     end
