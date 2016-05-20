@@ -46,7 +46,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
   # Use RSpec for specs
-  gem 'rspec-rails', '~> 3.1'
+  gem 'rspec-rails', '3.5.0.beta3'
 
   # Use Factory Girl for generating random test data
   gem 'factory_girl_rails'
